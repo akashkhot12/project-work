@@ -1,5 +1,6 @@
 export class offers {
-  id?: number;
   active?: boolean;
+  quantity?:number;
   discription?:string;
+
 }
