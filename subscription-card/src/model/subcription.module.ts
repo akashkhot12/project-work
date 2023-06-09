@@ -1,9 +1,10 @@
-import { offers } from "./offer.model";
+import { offer } from "./offer.model";
 
-export class subscription{
-  id?:number;
-  type?:string;
-  desc?:string;
-  price?:number;
-  offer?:offers[];
+export interface subscription{
+  id ? : number ;
+  type ? : string ;
+  title ? :  string ;
+  desc? :string;
+  price ? : number ;
+  offers ? : offer[] ;
 }

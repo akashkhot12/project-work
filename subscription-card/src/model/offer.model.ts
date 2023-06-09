@@ -1,6 +1,6 @@
-export class offers {
-  active?: boolean;
-  quantity?:number;
-  discription?:string;
-
+export interface offer{
+  id ? : number ;
+  available ? : boolean ;
+  quantity ?: number ;
+  description ?  : string ;
 }

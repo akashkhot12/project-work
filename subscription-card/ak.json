@@ -5,6 +5,7 @@
         {
           "id": 1,
           "type": "Free",
+          "desc":"get ready to access",
           "title": "For Freelancers",
           "price": 0,
           "offers": [
@@ -18,12 +19,12 @@
               "id": 2,
               "available": true,
               "quantity": 10,
-              "description": "download per months"
+              "description": "download/months"
             },
             {
               "id": 3,
               "available": true,
-              "quantity": "",
+              "quantity": "0",
               "description": "Raster files"
             }
           ]
@@ -31,6 +32,7 @@
         {
           "id": 2,
           "type": "Pro",
+          "desc":"get ready to pro access",
           "title": "For Agencies",
           "price": 40,
           "offers": [
@@ -42,23 +44,49 @@
             },{
               "id": 2,
               "status": true,
-              "quantity": "",
+
               "description": "Unlimited downloads"
             },{
               "id": 3,
               "status": true,
-              "quantity": "",
+
               "description": "Fully-editable files"
             },{
               "id": 4,
               "status": true,
-              "quantity": "",
+
               "description": "Custom packs"
             },{
               "id": 5,
               "status": true,
               "quantity": "200+",
               "description": " custom icons"
+            }
+          ]
+        },{
+          "id": 3,
+          "type": "Platinum",
+          "desc":"get ready to access",
+          "title": "For Freelancers",
+          "price": 0,
+          "offers": [
+            {
+              "id": 1,
+              "available": true,
+              "quantity": 1,
+              "description": "users"
+            },
+            {
+              "id": 2,
+              "available": true,
+              "quantity": 10,
+              "description": "download/months"
+            },
+            {
+              "id": 3,
+              "available": true,
+              "quantity": "",
+              "description": "Raster files"
             }
           ]
         }

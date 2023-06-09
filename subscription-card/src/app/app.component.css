@@ -73,7 +73,7 @@ body{margin-top:20px;}
 .single_price_plan .price {
     margin-bottom: 1.5rem;
 }
-.single_price_plan .price h4 {
+.single_price_plan .price h1 {
     position: relative;
     z-index: 1;
     font-size: 2.4rem;
@@ -92,9 +92,8 @@ body{margin-top:20px;}
     margin-bottom: 1.5rem;
 }
 .single_price_plan .description p {
-    line-height: 16px;
     margin: 0;
-    padding: 10px 0;
+    padding: 1px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -113,8 +112,8 @@ body{margin-top:20px;}
 .single_price_plan.active,
 .single_price_plan:hover,
 .single_price_plan:focus {
-    -webkit-box-shadow: 0 6px 50px 8px rgba(29, 31, 33, 0.15);
-    box-shadow: 0 6px 50px 8px rgba(4, 6, 7, 0.15);
+    -webkit-box-shadow: 0 6px 50px 8px rgba(26, 139, 251, 0.854);
+    box-shadow: 0 6px 50px 8px rgba(0, 0, 0, 0.15);
 }
 .single_price_plan .side-shape img {
     position: absolute;
@@ -143,4 +142,9 @@ body{margin-top:20px;}
     background: #2d2ed4;
     background: -webkit-gradient(linear, left top, right top, from(#e24997), to(#2d2ed4));
     background: linear-gradient(to right, #e24997, #2d2ed4);
+}
+#paragraph{
+  line-height: normal;
+  margin: 0;
+  padding: 0;
 }
