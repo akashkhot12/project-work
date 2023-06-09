@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+[x: string]: any;
   title = 'angular-material-form';
+  options: string[] = ['One', 'Two', 'Three'];
 }
