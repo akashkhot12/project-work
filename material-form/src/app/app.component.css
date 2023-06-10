@@ -3,3 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
+form{
+  justify-content: center;
+}
+
