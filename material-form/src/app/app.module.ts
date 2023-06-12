@@ -9,6 +9,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    NgIf,
+    MatButtonModule,
+    MatStepperModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
