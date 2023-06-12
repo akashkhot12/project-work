@@ -67,7 +67,7 @@
       <form [formGroup]="secondFormGroup">
         <mat-form-field class="file">
           <mat-label>Upload file</mat-label>
-          <label><input  matInput type="text" (change)="getName(name.value)"  #name> <span *ngIf="errorMessage" class="error-message text-danger">{{ errorMessage }}</span> </label>
+          <label><input  matInput type="text" (change)="getName(name.value)"  #name> </label>
           <input formControlName="secondCtrl" required type="file" (change)="getFile($event)" />
           <button mat-raised-button color="primary" (click)="submit()" value="Upload file" class="ms-4">Upload</button>
         </mat-form-field>

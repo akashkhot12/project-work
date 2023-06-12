@@ -8,6 +8,7 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule, FormBuilder} 
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  [x: string]: any;
   title = 'material-form';
   email = new FormControl('', [Validators.required, Validators.email]);
 
@@ -57,4 +58,14 @@ getFile(event : any){
       console.log("files : ", this.file );
     }
   }
+
+  validateFileUpload(): void {
+    const file: File = this['fileInput'].nativeElement.files[0];
+    const maxSize: number = 20 * 1024 * 1024; // 20MB in bytes
+
+    if (file.size > maxSize) {
+      alert('File size exceeds the limit of 20MB.');
+      this['fileInput'].nativeElement.value = ''; // Clear the selected file
+    }
+}
 }
