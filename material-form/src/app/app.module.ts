@@ -7,10 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
-
-
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -20,12 +18,13 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
     MatInputModule,
-    MatCardModule,
-    MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {   title = 'material-form';}
