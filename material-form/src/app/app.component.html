@@ -23,30 +23,6 @@
         <input matInput>
       </mat-form-field></div>
     </div>
-    <mat-card>
-      <p mat-card-title>Test file input with form field</p>
-
-      <mat-divider></mat-divider>
-
-
-        <mat-divider></mat-divider>
-
-        <mat-card-actions align="end">
-          <button mat-stroked-button color="primary" [disabled]="display.invalid" (click)="handleSubmit()">
-          Save
-        </button>
-        </mat-card-actions>
-    </mat-card>
-
-    <mat-card *ngIf="file_list.length" style="margin-top: 16px;">
-      <mat-list>
-        <div mat-subheader>Submit Files ({{ file_list.length }})</div>
-        <mat-list-item *ngFor="let file of file_list">
-          <mat-icon mat-list-icon>insert_drive_file</mat-icon>
-          <div mat-line>{{ file }}</div>
-        </mat-list-item>
-      </mat-list>
-    </mat-card>
   </mat-card-content>
 </mat-card>
 </form>
