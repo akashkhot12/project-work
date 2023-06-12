@@ -28,4 +28,33 @@ export class AppComponent {
   isLinear = false;
 
   constructor(private _formBuilder: FormBuilder) {}
+
+  name :string =""
+  file:any;
+  getName(name:string){
+    this.name = name ;
+  }
+
+  submit(){
+    let formData = new FormData();
+    formData.set('name' , this.name);
+    formData.set('file',this.file)
+    console.log(formData);
+  }
+
+  errorMessage:string | undefined ;
+
+
+
+getFile(event : any){
+    this.file = event.target.files[0];
+    const allowedFileTypes = ['application/csv']; // Define the allowed file types here
+    if (allowedFileTypes.indexOf(this.file.type) === -1) {
+      this.errorMessage = 'Invalid file type. Please upload a CSV file';
+    } else {
+      // Proceed with file upload logic
+      this.errorMessage = " "; // Reset the error message if the file type is valid
+      console.log("files : ", this.file );
+    }
+  }
 }

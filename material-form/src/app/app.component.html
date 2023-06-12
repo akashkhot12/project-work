@@ -39,7 +39,7 @@
             <div class="col-sm-4">
               <mat-form-field>
                 <mat-label>Choose a date</mat-label>
-                <input formControlName="firstCtrl" matInput [matDatepicker]="picker">
+                <input formControlName="firstCtrl"  required matInput [matDatepicker]="picker">
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
@@ -65,14 +65,15 @@
 
     <mat-step [stepControl]="secondFormGroup" label="Fill your CSV file">
       <form [formGroup]="secondFormGroup">
-        <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
+        <mat-form-field class="file">
+          <mat-label>Upload file</mat-label>
+          <label><input  matInput type="text" (change)="getName(name.value)"  #name> <span *ngIf="errorMessage" class="error-message text-danger">{{ errorMessage }}</span> </label>
+          <input formControlName="secondCtrl" required type="file" (change)="getFile($event)" />
+          <button mat-raised-button color="primary" (click)="submit()" value="Upload file" class="ms-4">Upload</button>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext >Next</button>
+          <button mat-raised-button matStepperPrevious>Back</button>
+          <button mat-raised-button matStepperNext color="accent" >Next</button>
         </div>
       </form>
     </mat-step>
@@ -80,8 +81,8 @@
       <ng-template matStepLabel>Done</ng-template>
       <p>You are now done.</p>
       <div>
-        <button mat-button matStepperPrevious >Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-raised-button matStepperPrevious >Back</button>
+        <button mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>
       </div>
     </mat-step>
   </mat-stepper>
