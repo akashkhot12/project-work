@@ -35,18 +35,13 @@ export class AppComponent {
   getName(name:string){
     this.name = name ;
   }
-
   submit(){
     let formData = new FormData();
     formData.set('name' , this.name);
     formData.set('file',this.file)
     console.log(formData);
   }
-
   errorMessage:string | undefined ;
-
-
-
 getFile(event : any){
   this.file = event.target.files[0];
   const allowedFileTypes = ['text/csv'];
