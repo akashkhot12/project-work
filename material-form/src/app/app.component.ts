@@ -29,12 +29,12 @@ export class AppComponent {
   isLinear = false;
 
   constructor(private _formBuilder: FormBuilder) {}
-
   name :string =""
   file:any;
   getName(name:string){
     this.name = name ;
   }
+
   submit(){
     let formData = new FormData();
     formData.set('name' , this.name);
