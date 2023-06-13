@@ -16,7 +16,10 @@
             <div class="col-4 Name">
               <mat-form-field>
                 <mat-label>First Name</mat-label>
-                <input formControlName="firstCtrl" required matInput>
+                <input formControlName="firstCtrl" type="text" pattern="^[a-zA-Z ]*$" required matInput>
+                <mat-error>
+                  Invalid input. Special characters are not allowed.
+                </mat-error>
               </mat-form-field>
             </div>
             <div class="col-4 Name"><mat-form-field>
