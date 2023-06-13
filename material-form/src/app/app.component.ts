@@ -14,7 +14,7 @@ export class AppComponent {
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
-      return 'You must enter a value';
+      return 'You must enter Email';
     }
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
@@ -48,15 +48,24 @@ export class AppComponent {
 
 
 getFile(event : any){
-    this.file = event.target.files[0];
-    const allowedFileTypes = ['application/csv']; // Define the allowed file types here
-    if (allowedFileTypes.indexOf(this.file.type) === -1) {
-      this.errorMessage = 'Invalid file type. Please upload a CSV file';
-    } else {
-      // Proceed with file upload logic
-      this.errorMessage = " "; // Reset the error message if the file type is valid
-      console.log("files : ", this.file );
-    }
+  this.file = event.target.files[0];
+  const allowedFileTypes = ['text/csv'];
+  const fileSizeInBytes = this.file.size
+  const allowedFileSizeInBytes =1048576
+  if (fileSizeInBytes > allowedFileSizeInBytes && allowedFileTypes.indexOf(this.file.type) === -1 ){
+    this.errorMessage = '*Invalid, file type should be csv and size should be less than 1mb .';
+    event.target.value = null;
+  }else if (allowedFileTypes.indexOf(this.file.type) === -1){
+    this.errorMessage = '*Invalid file type. Please upload csv file';
+    event.target.value = null;
+  }else if (fileSizeInBytes > allowedFileSizeInBytes){
+    this.errorMessage = '*File size exceeds the limit (1mb).';
+    event.target.value = null;
+  }else{
+    this.errorMessage = " ";
+    console.log("files : ", this.file );
+  }
+
   }
 
   validateFileUpload(): void {
