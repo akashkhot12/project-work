@@ -7,6 +7,7 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule, FormBuilder} 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   [x: string]: any;
   title = 'material-form';
