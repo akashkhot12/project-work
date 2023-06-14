@@ -33,7 +33,7 @@
 
           <mat-form-field class="Address">
             <mat-label>Address</mat-label>
-            <input formControlName="firstCtrl" pattern="^[a-zA-Z0-9,-]*$"  required matInput>
+            <input formControlName="firstCtrl" pattern="^[a-zA-Z0-9,-]*$" required matInput>
           </mat-form-field>
           <div class="row">
             <div class="col-sm-4">
@@ -48,7 +48,8 @@
             <div class="col-sm-4">
               <mat-form-field>
                 <mat-label>Enter your email</mat-label>
-                <input matInput formControlName="firstCtrl" placeholder="pat@example.com" [formControl]="email" required>
+                <input matInput formControlName="firstCtrl" placeholder="pat@example.com" [formControl]="email"
+                  required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
               </mat-form-field>
             </div>
@@ -68,8 +69,8 @@
       <mat-form-field class="file">
         <mat-label>Upload file</mat-label>
         <span *ngIf="errorMessage" class="error-message" style="color: red; font-size: 15px;">{{errorMessage}}</span>
-            <input matInput type="text" (change)="getName(name.value)"  #name /> <br />
-            <input  type="file" (change)="getFile($event)" />
+        <input matInput type="text" (change)="getName(name.value)" #name /> <br />
+        <input type="file" (change)="getFile($event)" />
         <button mat-raised-button color="primary" (click)="submit()" value="Upload file" class="ms-4">Upload</button>
       </mat-form-field>
       <div>
