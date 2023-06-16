@@ -5,3 +5,7 @@
   <h2>Draw!</h2>
   <button>Start Game</button>
 </div>
+
+<main>
+  <app-board *ngfor="let val of sqaures;let i =index"[value]="val"(click)="makeMove(i)"></app-board>
+</main>

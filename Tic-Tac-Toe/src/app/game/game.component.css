@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.outer-cont
+{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom left, #00ffcc,#cc99ff 100%);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
