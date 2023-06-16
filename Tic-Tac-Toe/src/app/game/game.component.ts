@@ -40,7 +40,9 @@ constructor(){}
     }
     this.winner = this.calculateWinner();
 
-    if( )
+    if( !this.winner && this.counter ==9 ){
+      this.isdraw='yes'
+    }
   }
 
   calculateWinner(){
