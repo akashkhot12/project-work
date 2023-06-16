@@ -39,6 +39,8 @@ constructor(){}
 
     }
     this.winner = this.calculateWinner();
+
+    if( )
   }
 
   calculateWinner(){
@@ -59,4 +61,4 @@ constructor(){}
 
 }
 
-
+}
