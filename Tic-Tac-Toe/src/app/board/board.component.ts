@@ -6,11 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit{
-@Input()value:'X'|'O'|undefined
+@Input() value:'X'|'O'|undefined
   constructor(){
 
   }
   ngOnInit(): void {
+
 
   }
 }
