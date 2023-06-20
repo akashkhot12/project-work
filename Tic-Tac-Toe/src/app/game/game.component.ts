@@ -6,17 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  squares:any = []
+  squares:any = [];
   xIsNext = true;
   winner = '';
   counter = 0;
   isdraw= '';
-  freshpage=true;
+  freshpage=false;
 
 
 constructor(){}
   ngOnInit(): void {
-
   }
 
   newGame(){
@@ -25,10 +24,12 @@ constructor(){}
     this.isdraw= '';
     this.counter = 0;
     this.freshpage=false;
+    console.log("game start");
+
   }
 
   get player(){
-    return this.xIsNext ?'X':'O'
+    return this.xIsNext ?'X':'O';
   }
 
   makeMove(idx:number){
@@ -36,7 +37,6 @@ constructor(){}
       this.squares.splice(idx, 1, this.player)
       this.xIsNext= !this.xIsNext;
       this.counter++;
-
     }
     this.winner = this.calculateWinner();
 
