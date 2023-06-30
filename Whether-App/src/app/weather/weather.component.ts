@@ -12,7 +12,7 @@ export class WeatherComponent {
 
  constructor(private weatherService:WeatherService){}
 
- ngOnit(){
+ ngOnInit(){
 
  }
 
