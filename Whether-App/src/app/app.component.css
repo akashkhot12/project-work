@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    font-family: 'Rubik',sans-serif;
+    background: #111;
+}
+
+*{
+    box-sizing: border-box;
+}
