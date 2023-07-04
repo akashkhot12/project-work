@@ -1,16 +1,74 @@
-<div>
-    <h1>Weather Application</h1>
+<div class="weather-app">
+  <div class="container ">
+    <h3 class="brand">Weather broadcast</h3>
+  <div *ngIf="weatherData">
+  <h1 class="temp gap"  >{{weatherData.main.temp}}&#176;</h1>
+  <div class="city-time gap">
+    <p class="name text-center fs-1">{{weatherData.name}}</p>
+    <!-- <small class="font" > -->
+    <div>
+      <span class="time mx-3">{{time}}</span>
+    </div>
+    <!-- </small> -->
+  </div>
+    <div class="weather gap ms-5 ">
+      <img *ngIf="weatherData.weather[0].main == 'Clouds' "
+        [src]="src"
+        alt="icon"
+        class="icon"
+        width="40"
+        height="40"
+      />
+      <img *ngIf="weatherData.weather[0].main == 'Clear' "
+        [src]="src"
+        alt="icon"
+        class="icon"
+        width="40"
+        height="40"
+      />
+      <span class="condition hello" *ngIf="weatherData">{{weatherData.weather[0].main}}</span>
+    </div>
+</div>
+</div>
 
-    <form action="">
-       <input type="text" name="cityName" placeholder="enter a city name"[(ngModel)]="city">
-        <button type="button "(click)="getWeather()">Get Weather</button>
+  <div class="panel">
+    <form action="" id="locationInput">
+      <input type="text" class="search" name="city" placeholder="Search Location.."  [(ngModel)]="city" />
+      <button type="button" class="submit" (click)="getWeather()">
+        <i class="fas fa-search"></i>
+      </button>
     </form>
 
-    <div *ngIf="weatherData">
-        <h2>{{weatherData.name}}</h2>
-        <p>Temperature:{{weatherData.main.temp}}</p>
-        <p>Humidity:{{weatherData.main.humidity}}</p>
-        <p>Weather:{{weatherData.weather[0].description}}</p>
-    </div>
+    <ul class="details" *ngIf="weatherData">
+      <h1>{{weatherData.weather[0].main}}</h1>
+      <li>
+        <span>Weather</span>
+        <span class="cloud">{{weatherData.weather[0].description}}</span>
+      </li>
+      <li>
+        <span>Humidity</span>
+        <span class="humidity">64%</span>
+      </li>
+      <li>
+        <span>Wind</span>
+        <span class="wind">8km/h</span>
+      </li>
+      <li>
+        <span>Sunrise</span>
+        <span class="wind">{{weatherData.sys.sunrise}}</span>
+      </li>
+      <li>
+        <span>Sunset</span>
+        <span class="wind">{{weatherData.sys.sunset}}</span>
+      </li>
+      <li>
+        <span>Visibility</span>
+        <span class="wind">{{weatherData.visibility}}</span>
+      </li>
+      <li>
+        <span>Pressure</span>
+        <span class="wind">{{weatherData.main.pressure}}</span>
+      </li>
+    </ul>
+  </div>
 
-</div>
