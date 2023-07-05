@@ -1,7 +1,69 @@
 h1,h3{
     font-weight: 400;
 }
-
+.gap{
+    margin-left: 20px;
+}
+#move-vertical {
+    animation-name: move-vertical;
+  }
+  
+  @keyframes move-vertical {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+.brand{
+    font-size: 35px;
+    font-size: calc( 1em + 3vmin );
+    font-weight: 200;
+    color: tomato;
+    
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: white;
+    --stroke-color: lightblue;
+    
+    text-shadow: 
+      
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      var(--background-color), 
+      
+      calc( var(--x-offset) - var(--stroke) )
+      calc( var(--y-offset) + var(--stroke) )
+      0px
+      var(--stroke-color);
+    
+  }
+  /* for browsers that support spread, added in
+  https://drafts.csswg.org/css-text-decor-4/#text-shadow-property
+  currently: none browsers! none of them!
+  I can't even find a test: 
+  https://wpt.fyi/results/css/css-text-decor */
+  @supports ( text-shadow: 1px 1px 1px 1px black ) {
+    h1 {
+      text-shadow:
+        
+        var(--x-offset)
+        var(--y-offset)
+        0px
+        0px
+        var(--background-color), 
+        
+        var(--x-offset) 
+        var(--y-offset)
+        var(--stroke)
+        0px
+        var(--stroke-color);
+      
+    }
+}
 .weather-app{
     min-height: 100vh;
     background-image: url(../../assets/image/lake-1802337.jpg) ;
@@ -97,9 +159,9 @@ h1,h3{
 
 .submit{
     position: absolute;
-    top: 18px;
-    right: 20px;
-    padding: 0.8em;
+    top: 29px;
+    right: 35px;
+    padding: 0.9em;
     margin: 0;
     margin-right: 10px;
     border: none;
@@ -109,7 +171,7 @@ h1,h3{
     cursor: pointer;
     font-size: 1.2em;
     transition: 0.4s;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 
 .submit:hover{
