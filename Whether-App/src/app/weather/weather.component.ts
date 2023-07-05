@@ -26,8 +26,11 @@ export class WeatherComponent {
  getImage(){
   if(this.weatherData.weather[0].main === 'Clouds'){
     this.src = "../../assets/image/clipart3532095.png" ; 
-  }else{
+  }else if(this.weatherData.weather[0].main === 'Strom'){
     this.src = "../../assets/image/storm.png" ;
+  }
+  else if(this.weatherData.weather[0].main === 'Haze'){
+    this.src = "../../assets/image/haze.png" ;
   }
  }
  getWeather(){
