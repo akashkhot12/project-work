@@ -1,61 +1,51 @@
-h1,h3{
+h1,
+h3 {
     font-weight: 400;
 }
-.gap{
+
+.gap {
     margin-left: 20px;
 }
 
-.brand{
+.brand {
     font-size: 35px;
-    font-size: calc( 1em + 3vmin );
+    font-size: calc(1em + 3vmin);
     font-weight: 200;
     color: rgb(248, 245, 244);
-    
+
     --x-offset: -0.0625em;
     --y-offset: 0.0625em;
     --stroke: 0.025em;
     --background-color: rgb(4, 4, 4);
     --stroke-color: rgb(7, 7, 7);
-    
-    text-shadow: 
-      
-      var(--x-offset)
-      var(--y-offset)
-      0px
-      var(--background-color), 
-      
-      calc( var(--x-offset) - var(--stroke) )
-      calc( var(--y-offset) + var(--stroke) )
-      0px
-      var(--stroke-color);
-    
-  }
-  /* for browsers that support spread, added in
+
+    text-shadow:
+
+        var(--x-offset) var(--y-offset) 0px var(--background-color),
+
+        calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke)) 0px var(--stroke-color);
+
+}
+
+/* for browsers that support spread, added in
   https://drafts.csswg.org/css-text-decor-4/#text-shadow-property
   currently: none browsers! none of them!
   I can't even find a test: 
   https://wpt.fyi/results/css/css-text-decor */
-  @supports ( text-shadow: 1px 1px 1px 1px black ) {
+@supports (text-shadow: 1px 1px 1px 1px black) {
     h1 {
-      text-shadow:
-        
-        var(--x-offset)
-        var(--y-offset)
-        0px
-        0px
-        var(--background-color), 
-        
-        var(--x-offset) 
-        var(--y-offset)
-        var(--stroke)
-        0px
-        var(--stroke-color);
-      
+        text-shadow:
+
+            var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
+
+            var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+
     }
 }
-.weather-app{
+
+.weather-app {
     min-height: 100vh;
-    background-image: url(../../assets/image/lake-1802337.jpg) ;
+    background-image: url(../../assets/image/lake-1802337.jpg);
     /* width: 100%;
     height: 100%; */
     background-size: cover;
@@ -68,23 +58,24 @@ h1,h3{
     font-size: 15px;
 }
 
-.weather-app::before{
+.weather-app::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.3);
-    z-index:0 ;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 
 }
 
-.logo-space{
+.logo-space {
     margin-right: 50px;
 }
-.container{
-   
+
+.container {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -98,7 +89,7 @@ h1,h3{
 
 }
 
-.container > div {
+.container>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,37 +97,36 @@ h1,h3{
 
 .city-time,
 .temp,
-.weather{
+.weather {
     margin: 0 1em;
 }
 
-.city-time{
+.city-time {
     margin: 0;
-    margin-bottom:0 ;
+    margin-bottom: 0;
     font-size: 20px;
 }
 
 
-.temp{
+.temp {
     font-size: 7em;
     margin: 0;
 }
 
-.weather img{
+.weather img {
     display: block;
-    margin: 1px 0 ;
+    margin: 1px 0;
 
 }
 
-.panel{
+.panel {
     position: absolute;
     width: 40%;
     height: 100%;
     top: 0;
     right: 0;
-    background: rgba(110,110,110,0.25);
-    box-shadow: 0 8px 32 px 0
-    rgba(0,0,0,0.3);
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32 px 0 rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -149,7 +139,7 @@ h1,h3{
     margin-bottom: 3em;
 }
 
-.submit{
+.submit {
     position: absolute;
     top: 29px;
     right: 35px;
@@ -166,15 +156,16 @@ h1,h3{
     border-radius: 20px;
 }
 
-.submit:hover{
+.submit:hover {
     background: #fff !important;
     color: #000;
 }
 
-.hello{
+.hello {
     font-size: 12px;
 }
-.search{
+
+.search {
     background: none;
     border: none;
     border-bottom: 1px #ccc solid;
@@ -184,14 +175,15 @@ h1,h3{
     font-size: 1.1em;
 }
 
-.search:focus{
+.search:focus {
     outline: none;
 }
 
-.search::placeholder{
-   color: #ccc; 
+.search::placeholder {
+    color: #ccc;
 }
-.panel ul{
+
+.panel ul {
     padding: 0 0 1em 0;
     margin: 2em 0;
     border-bottom: 1px #ccc solid;
@@ -202,46 +194,51 @@ h1,h3{
     margin: 2.5em 0;
 }
 
-.panel ul h4{
+.panel ul h4 {
     margin: 3em 0;
 }
 
-.city{
+.city {
     display: block;
     cursor: pointer;
 }
- .city:hover{
+
+.city:hover {
     color: #fff;
- }
-.details li{
+}
+
+.details li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.gap{
+.gap {
     margin: 0 20px;
 }
 
 
 
 
-@media  screen and (max-width:800px) {
-    .panel, .container{
+@media screen and (max-width:800px) {
+
+    .panel,
+    .container {
         position: relative;
         width: 100%;
         top: initial;
     }
 }
 
-@media  screen and (max-width:500px) {
-    html{
+@media screen and (max-width:500px) {
+    html {
         font-size: 12px;
     }
 }
 
-@media screen and (max-height:300px){
-    .weather-app{
-        min-height: 40em; ;
+@media screen and (max-height:300px) {
+    .weather-app {
+        min-height: 40em;
+        ;
     }
 }
