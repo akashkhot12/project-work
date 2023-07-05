@@ -73,53 +73,53 @@
       height="40"
     /></h1>
       <li>
-        <span>Weather <img  alt="icon"
+        <span class="logo-space">Weather <img  alt="icon"
           class="icon"
           width="20"
           height="20" src="./../assets/image/weather.png"></span>
         <span class="cloud">{{weatherData.weather[0].description}}</span>
       </li>
       <li>
-        <span>Humidity   <img  alt="icon"
+        <span class="logo-space">Humidity   <img  alt="icon"
           class="icon"
           width="20"
           height="20" src="./../assets/image/humidity.png"></span>
-        <span class="humidity">64%</span>
+        <span class="humidity">{{weatherData.main.humidity}}%</span>
       </li>
       <li>
-        <span>Wind <img  alt="icon"
+        <span class="logo-space">Wind <img  alt="icon"
           class="icon"
           width="20"
           height="20" src="./../assets/image/wind.png"></span>
-        <span class="wind">8km/h</span>
+        <span class="wind">{{weatherData.wind.speed}}km/h</span>
       </li>
       <li>
-        <span>Sunrise  <img  alt="icon"
+        <span class="logo-space">Sunrise  <img  alt="icon"
           class="icon"
           width="20"
           height="25" src="./../assets/image/sunrise.png"></span>
         <span class="wind">{{weatherData.sys.sunrise}}</span>
       </li>
       <li>
-        <span>Sunset <img  alt="icon"
+        <span class="logo-space">Sunset <img  alt="icon"
           class="icon"
           width="20"
           height="25" src="./../assets/image/sunset.png"></span>
         <span class="wind">{{weatherData.sys.sunset}}</span>
       </li>
       <li>
-        <span>Visibility <img  alt="icon"
+        <span class="logo-space">Visibility <img  alt="icon"
           class="icon"
           width="20"
           height="20" src="./../assets/image/visibility.png"></span>
-        <span class="wind">{{weatherData.visibility}}</span>
+        <span class="wind">{{weatherData.visibility}} km</span>
       </li>
       <li>
-        <span>Pressure <img  alt="icon"
+        <span class="logo-space">Pressure <img  alt="icon"
           class="icon"
           width="20"
           height="20" src="./../assets/image/pressure.png"></span>
-        <span class="wind">{{weatherData.main.pressure}}</span>
+        <span class="wind">{{weatherData.main.pressure}} mb</span>
       </li>
     </ul>
   </div>

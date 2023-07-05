@@ -4,18 +4,7 @@ h1,h3{
 .gap{
     margin-left: 20px;
 }
-#move-vertical {
-    animation-name: move-vertical;
-  }
-  
-  @keyframes move-vertical {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(100%);
-    }
-  }
+
 .brand{
     font-size: 35px;
     font-size: calc( 1em + 3vmin );
@@ -91,6 +80,9 @@ h1,h3{
 
 }
 
+.logo-space{
+    margin-right: 50px;
+}
 .container{
    
     position: absolute;
