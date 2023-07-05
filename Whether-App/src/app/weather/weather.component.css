@@ -9,13 +9,13 @@ h1,h3{
     font-size: 35px;
     font-size: calc( 1em + 3vmin );
     font-weight: 200;
-    color: tomato;
+    color: rgb(248, 245, 244);
     
     --x-offset: -0.0625em;
     --y-offset: 0.0625em;
     --stroke: 0.025em;
-    --background-color: white;
-    --stroke-color: lightblue;
+    --background-color: rgb(4, 4, 4);
+    --stroke-color: rgb(7, 7, 7);
     
     text-shadow: 
       
