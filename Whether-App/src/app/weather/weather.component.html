@@ -1,6 +1,10 @@
 <div class="weather-app">
   <div class="container ">
-    <h3 class="brand">Weather broadcast</h3>
+    <h3 class="brand" ><img   alt="icon"
+      class="icon"
+      id="move-vertical"
+      width="50"
+      height="50"src="./../assets/image/weather-app.png"><u class="gap">Weather broadcast</u></h3>
   <div *ngIf="weatherData">
   <h1 class="temp gap"  >{{weatherData.main.temp}}&#176;</h1>
   <div class="city-time gap">
@@ -46,34 +50,75 @@
       </button>
     </form>
 
-    <ul class="details" *ngIf="weatherData">
-      <h1>{{weatherData.weather[0].main}}</h1>
+    <ul class="details" *ngIf="weatherData" >
+      <h1 >{{weatherData.weather[0].main}} <img *ngIf="weatherData.weather[0].main == 'Clouds' "
+        [src]="src"
+        alt="icon"
+        class="icon"
+        width="40"
+        height="40"
+      />
+      <img *ngIf="weatherData.weather[0].main == 'Clear' "
+        [src]="src"
+        alt="icon"
+        class="icon"
+        width="40"
+        height="40"
+      />
+      <img *ngIf="weatherData.weather[0].main == 'Haze' "
+      [src]="src"
+      alt="icon"
+      class="icon"
+      width="40"
+      height="40"
+    /></h1>
       <li>
-        <span>Weather</span>
+        <span>Weather <img  alt="icon"
+          class="icon"
+          width="20"
+          height="20" src="./../assets/image/weather.png"></span>
         <span class="cloud">{{weatherData.weather[0].description}}</span>
       </li>
       <li>
-        <span>Humidity</span>
+        <span>Humidity   <img  alt="icon"
+          class="icon"
+          width="20"
+          height="20" src="./../assets/image/humidity.png"></span>
         <span class="humidity">64%</span>
       </li>
       <li>
-        <span>Wind</span>
+        <span>Wind <img  alt="icon"
+          class="icon"
+          width="20"
+          height="20" src="./../assets/image/wind.png"></span>
         <span class="wind">8km/h</span>
       </li>
       <li>
-        <span>Sunrise</span>
+        <span>Sunrise  <img  alt="icon"
+          class="icon"
+          width="20"
+          height="25" src="./../assets/image/sunrise.png"></span>
         <span class="wind">{{weatherData.sys.sunrise}}</span>
       </li>
       <li>
-        <span>Sunset</span>
+        <span>Sunset <img  alt="icon"
+          class="icon"
+          width="20"
+          height="25" src="./../assets/image/sunset.png"></span>
         <span class="wind">{{weatherData.sys.sunset}}</span>
       </li>
       <li>
-        <span>Visibility</span>
+        <span>Visibility <img  alt="icon"
+          class="icon"
+          width="20"
+          height="20" src="./../assets/image/visibility.png"></span>
         <span class="wind">{{weatherData.visibility}}</span>
       </li>
       <li>
-        <span>Pressure</span>
+        <span>Pressure <img  alt="icon"
+          class="icon"
+          width="20"
+          height="20" src="./../assets/image/pressure.png"></span>
         <span class="wind">{{weatherData.main.pressure}}</span>
       </li>
     </ul>
