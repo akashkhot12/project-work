@@ -20,7 +20,8 @@ export class WeatherComponent {
 
 
  ngOnInit(){
-
+  this.city='Nagpur';
+  this.getWeather();
  }
 
  getImage(){
