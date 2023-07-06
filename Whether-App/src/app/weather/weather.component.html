@@ -20,35 +20,7 @@
         </div>
         <!-- </small> -->
       </div>
-      <div class="weather gap ms-5">
-        <img
-          *ngIf="weatherData.weather[0].main == 'Clouds'"
-          [src]="src"
-          alt="icon"
-          class="icon"
-          width="30"
-          height="30"
-        />
-        <img
-          *ngIf="weatherData.weather[0].main == 'Clear'"
-          [src]="src"
-          alt="icon"
-          class="icon"
-          width="30"
-          height="30"
-        />
-        <img
-          *ngIf="weatherData.weather[0].main == 'Haze'"
-          [src]="src"
-          alt="icon"
-          class="icon"
-          width="30"
-          height="30"
-        />
-        <span class="condition hello" *ngIf="weatherData">{{
-          weatherData.weather[0].main
-        }}</span>
-      </div>
+      <!--  -->
     </div>
   </div>
 
