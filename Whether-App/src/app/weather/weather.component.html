@@ -29,7 +29,7 @@
       <input
         type="text"
         class="search"
-        (keydown.enter)=getWeather()
+        (keydown.enter)="getWeather()"
         name="city"
         placeholder="Search Location.."
         [(ngModel)]="city"
