@@ -32,6 +32,9 @@ export class WeatherComponent {
   else if(this.weatherData.weather[0].main === 'Haze'){
     this.src = "../../assets/image/haze.png" ;
   }
+  else if(this.weatherData.weather[0].main === 'Rain'){
+    this.src = "../../assets/image/rain.png" ;
+  }
  }
  getWeather(){
   this.weatherService.getWeather(this.city)

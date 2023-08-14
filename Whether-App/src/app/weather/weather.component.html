@@ -66,90 +66,99 @@
           width="40"
           height="40"
         />
+        <img
+          *ngIf="weatherData.weather[0].main == 'Rain'"
+          [src]="src"
+          alt="icon"
+          class="icon"
+          width="80"
+          height="80"
+        />
       </h1>
       <li>
         <span class="logo-space"
           >Weather
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="20"
-            src="./../assets/image/weather.png"
-        /></span>
-        <span class="cloud">{{ weatherData.weather[0].description }}</span>
+         </span>
+        <span class="cloud">{{ weatherData.weather[0].description }}  <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="20"
+          src="./../assets/image/weather.png"
+      /></span>
+        
       </li>
       <li>
         <span class="logo-space"
           >Humidity
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="20"
-            src="./../assets/image/humidity.png"
-        /></span>
-        <span class="humidity">{{ weatherData.main.humidity }}%</span>
+          </span>
+        <span class="humidity">{{ weatherData.main.humidity }}% <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="20"
+          src="./../assets/image/humidity.png"
+      /></span>
       </li>
       <li>
         <span class="logo-space"
           >Wind
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="20"
-            src="./../assets/image/wind.png"
-        /></span>
-        <span class="wind">{{ weatherData.wind.speed }}km/h</span>
+          </span>
+        <span class="wind">{{ weatherData.wind.speed }}km/h <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="20"
+          src="./../assets/image/wind.png"
+      /></span>
       </li>
       <li>
         <span class="logo-space"
           >Sunrise
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="25"
-            src="./../assets/image/sunrise.png"
-        /></span>
-        <span class="wind">{{ weatherData.sys.sunrise }}</span>
+          </span>
+        <span class="wind">{{ weatherData.sys.sunrise }} <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="25"
+          src="./../assets/image/sunrise.png"
+      /></span>
       </li>
       <li>
         <span class="logo-space"
           >Sunset
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="25"
-            src="./../assets/image/sunset.png"
-        /></span>
-        <span class="wind">{{ weatherData.sys.sunset }}</span>
+          </span>
+        <span class="wind">{{ weatherData.sys.sunset }} <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="25"
+          src="./../assets/image/sunset.png"
+      /></span>
       </li>
       <li>
         <span class="logo-space"
           >Visibility
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="20"
-            src="./../assets/image/visibility.png"
-        /></span>
-        <span class="wind">{{ weatherData.visibility }} km</span>
+          </span>
+        <span class="wind">{{ weatherData.visibility }} km <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="20"
+          src="./../assets/image/visibility.png"
+      /></span>
       </li>
       <li>
         <span class="logo-space"
           >Pressure
-          <img
-            alt="icon"
-            class="icon"
-            width="20"
-            height="20"
-            src="./../assets/image/pressure.png"
-        /></span>
-        <span class="wind">{{ weatherData.main.pressure }} mb</span>
+          </span>
+        <span class="wind">{{ weatherData.main.pressure }} mb <img
+          alt="icon"
+          class="icon"
+          width="20"
+          height="20"
+          src="./../assets/image/pressure.png"
+      /></span>
       </li>
     </ul>
   </div>
