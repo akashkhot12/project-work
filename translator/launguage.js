@@ -1,5 +1,6 @@
 
 const language = {
+    "en-GB": "English",
     "am-ET": "Amharic",
     "ar-SA": "Arabic",
     "be-BY": "Bielarus",
@@ -19,7 +20,6 @@ const language = {
     "de-DE": "German",
     "dv-MV": "Maldivian",
     "el-GR": "Greek",
-    "en-GB": "English",
     "es-ES": "Spanish",
     "et-EE": "Estonian",
     "eu-ES": "Basque",
