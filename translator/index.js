@@ -47,7 +47,7 @@ toVoice.addEventListener('click',function(){
     let fromTalk;
     fromTalk = new SpeechSynthesisUtterance(transText.value);
     fromTalk.lang = langOption[1].value;
-    speechSynthesis.speak(fromTalk)
+    speechSynthesis.speak(fromTalk);
 });
 
 cpyBtn.addEventListener('click',function(){
