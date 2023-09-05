@@ -1,8 +1,11 @@
 let langOption = document.querySelectorAll('select');
 let fromText = document.querySelector('.fromText');
 let transText = document.querySelector('.toTranslate');
-let fromVoice = document.querySelector('.from')
-
+let fromVoice = document.querySelector('.from');
+let toVoice =   document.querySelector('.to');
+let cpyBtn = document.querySelector('.bx-copy');
+let countValue = document.querySelector('.code_length');
+let exchangeLang = document.querySelector('.bx-transfer');
 
 langOption.forEach((get,con)=>{
     for(let countryCode in language){
@@ -38,4 +41,30 @@ fromVoice.addEventListener('click',function(){
     let fromTalk;
     fromTalk = new SpeechSynthesisUtterance(fromText.value);
     speechSynthesis.speak(fromTalk);
+})
+
+toVoice.addEventListener('click',function(){
+    let fromTalk;
+    fromTalk = new SpeechSynthesisUtterance(transText.value);
+    fromTalk.lang = langOption[1].value;
+    speechSynthesis.speak(fromTalk)
+});
+
+cpyBtn.addEventListener('click',function(){
+    navigator.clipboard.writeText(transText.value)
+})
+
+fromText.addEventListener('keyup' , function(){
+    countValue.innerHTML = `${fromText.value.length}/5000`
+})
+
+exchangeLang.addEventListener('click',function(){
+    let tempText = fromText.value;
+    fromText.value = transText.value;
+    transText.value = tempText;
+
+let tempOpt=langOption[0].value;
+langOption[0].value = langOption[1].value;
+langOption[1].value = tempOpt;
+
 })
