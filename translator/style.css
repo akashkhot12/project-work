@@ -7,7 +7,7 @@
 
 body{
     height: 100vh;
-    background-color: #fff;
+    background: -webkit-linear-gradient(left,#cbaaee,#77a3ef);
     display: flex;
     justify-content: center;
     align-items: center;
