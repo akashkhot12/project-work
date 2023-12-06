@@ -8,3 +8,6 @@ http.listen(PORT,()=>{
     console.log(`server is listening on port ${PORT}`);
 })
 
+app.get('/',(req,res)=>{
+    res.send("hello world")
+})
