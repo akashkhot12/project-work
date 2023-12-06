@@ -1,4 +1,5 @@
 const express =require("express");
+const { dirname } = require("path");
 const app = express();
 const http = require("http").createServer(app)
 
@@ -9,5 +10,5 @@ http.listen(PORT,()=>{
 })
 
 app.get('/',(req,res)=>{
-    res.send("hello world")
+    res.sendFile(__dirname+"/index.html")
 })
