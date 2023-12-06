@@ -13,7 +13,7 @@ body {
     background: #F8F8F8;
     font-family: 'Roboto', sans-serif;
 }
-section.chat-session {
+section.chat__section {
     width: 800px;
     max-width: 90%;
     background: #fff;
@@ -31,7 +31,7 @@ section.chat-session {
     color: #444;
     margin-left: 10px;
 }
-.message-area{
+.message__area{
     height: 500px;
     padding: 16px;
     display: flex;

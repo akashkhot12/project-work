@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/chat.png">
-        <title>Chat-App</title>
-        <link rel="stylesheet" href="/style.css">
-    </head>
-    <body>
-        <section class="chat-session">
-            <div class="brand">
-                <img height="40" src="/chat.png" alt>
-                <h1>chat app</h1>
-            </div>
 
-            <div class="message-area">
-                <div class="incoming-message">
-                    <h4>Rakesh</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Tenetur, quod.</p>
-                </div>
-                <div class="outgoing-message">
-                    <h4>akash</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Tenetur, quod.</p>
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/chat.png">
+    <title>chat-app</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
 
-            <div>
-                <textarea  id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
-            </div>
-        </section>
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="/client.js"></script>
-    </body>
+<body>
+    <section class="chat__section">
+        <div class="brand">
+            <img height="40" src="/chat.png" alt="">
+            <h1>Chat App</h1>
+        </div>
+        <div class="message__area"></div>
+        <div>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+</body>
+
 </html>
